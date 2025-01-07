@@ -13,13 +13,13 @@ i can never manage to spell it one way or the other.
 // Time to remember/google how to do basic JS...
 
 //vars place. idk. 
-
+alert("script loaded!");
 var noteletHolder = document.getElementById("noteletHolder"); // very very important, i feel, so it's just getting defined 
-
+alert("notelet loaded!");
 //end vars. for now. they always come back...
 
 
-run main
+//run main
 main();
 
 
