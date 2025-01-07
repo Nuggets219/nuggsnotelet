@@ -13,9 +13,7 @@ i can never manage to spell it one way or the other.
 // Time to remember/google how to do basic JS...
 
 //vars place. idk. 
-alert("script loaded!");
 var noteletHolder = document.getElementById("noteletHolder"); // very very important, i feel, so it's just getting defined 
-alert("notelet loaded!");
 //end vars. for now. they always come back...
 
 
@@ -41,11 +39,8 @@ function main() { //Builds the nodelet, then runs the scripts. only run once or 
   var nlTimePar = document.createElement("p"); //making the actual paragraph that holds the time
   nlTimePar.setAttribute("id","netherlandsTimeParagraph");
   nlTimeDiv.appendChild(nlTimePar); //ka-CHUNK
-  var timeButton = document.createElement("button");
-  timeButton.setAttribute("id","timeButton");
-  timeButton.setAttribute("class","button");
-  nlTimeDiv.appendChild(timeButton); //ka-CHUNK
   //time function construction complete. run time function.
+  updateNLTime();
   setInterval(updateNLTime, 15000); //updates every 15 seconds.
   //end time setup.
   
@@ -57,4 +52,5 @@ function updateNLTime() {
   //also, finally, f-strings in js. aka template literals.
   nlTimePar.innerHTML = `${Date.getUTCHours()+1}:${Date.getUTCMinutes()}:${Date.getUTCSeconds()}`;
   //and that's literally it. All that setup to show this one line of code. god bless the makers of JS and HTML.
+  alert("time updated!");
 }
