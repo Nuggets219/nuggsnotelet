@@ -19,8 +19,8 @@ var noteletHolder = document.getElementById("noteletHolder"); // very very impor
 //end vars. for now. they always come back...
 
 
-//run main
-//main();
+run main
+main();
 
 
 function main() { //Builds the nodelet, then runs the scripts. only run once or i WILL pull your eyes outta their damn sockets.
