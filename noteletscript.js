@@ -13,6 +13,7 @@ i can never manage to spell it one way or the other.
 // Time to remember/google how to do basic JS...
 
 //vars place. idk. 
+var dateya = new Date();
 var noteletHolder = document.getElementById("noteletHolder"); // very very important, i feel, so it's just getting defined 
 //end vars. for now. they always come back...
 
@@ -52,7 +53,7 @@ function updateNLTime() {
   //We will format it like this: h:m:s
   //also, finally, f-strings in js. aka template literals.
   alert("time function started!");
-  nlTimePar.innerHTML = `${Date.getUTCHours()+1}:${Date.getUTCMinutes()}:${Date.getUTCSeconds()}`;
+  nlTimePar.innerHTML = `${dateya.getUTCHours()+1}:${dateya.getUTCMinutes()}:${dateya.getUTCSeconds()}`;
   //and that's literally it. All that setup to show this one line of code. god bless the makers of JS and HTML.
   alert("time updated!");
 }
