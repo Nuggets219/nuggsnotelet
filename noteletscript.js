@@ -41,7 +41,7 @@ function main() { //Builds the nodelet, then runs the scripts. only run once or 
   nlTimeDiv.appendChild(nlTimePar); //ka-CHUNK
   //time function construction complete. run time function.
   updateNLTime();
-  setInterval(updateNLTime, 15000); //updates every 15 seconds.
+  var timer = setInterval(updateNLTime, 15000); //updates every 15 seconds.
   //end time setup.
   
 }
