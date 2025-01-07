@@ -20,7 +20,7 @@ var noteletHolder = document.getElementById("noteletHolder"); // very very impor
 
 
 //run main
-main();
+//main();
 
 
 function main() { //Builds the nodelet, then runs the scripts. only run once or i WILL pull your eyes outta their damn sockets.
@@ -46,7 +46,7 @@ function main() { //Builds the nodelet, then runs the scripts. only run once or 
   timeButton.setAttribute("class","button");
   nlTimeDiv.appendChild(timeButton); //ka-CHUNK
   //time function construction complete. run time function.
-  //setInterval(updateNLTime, 15000); //updates every 15 seconds.
+  setInterval(updateNLTime, 15000); //updates every 15 seconds.
   //end time setup.
   
 }
