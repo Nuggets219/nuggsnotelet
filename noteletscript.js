@@ -40,6 +40,7 @@ function main() { //Builds the nodelet, then runs the scripts. only run once or 
   nlTimePar.setAttribute("id","netherlandsTimeParagraph");
   nlTimeDiv.appendChild(nlTimePar); //ka-CHUNK
   //time function construction complete. run time function.
+  alert("basics built, trying to update time...");
   updateNLTime();
   var timer = setInterval(updateNLTime, 15000); //updates every 15 seconds.
   //end time setup.
@@ -50,6 +51,7 @@ function updateNLTime() {
   //The Netherlands in in UTC +1 hour, so we can do the math using the standard UTC timer. 
   //We will format it like this: h:m:s
   //also, finally, f-strings in js. aka template literals.
+  alert("time function started!");
   nlTimePar.innerHTML = `${Date.getUTCHours()+1}:${Date.getUTCMinutes()}:${Date.getUTCSeconds()}`;
   //and that's literally it. All that setup to show this one line of code. god bless the makers of JS and HTML.
   alert("time updated!");
