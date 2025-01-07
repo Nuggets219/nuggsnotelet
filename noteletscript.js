@@ -16,8 +16,12 @@ i can never manage to spell it one way or the other.
 
 var noteletHolder = document.getElementById("noteletHolder"); // very very important, i feel, so it's just getting defined 
 
-
 //end vars. for now. they always come back...
+
+
+//run main
+main();
+
 
 function main() { //Builds the nodelet, then runs the scripts. only run once or i WILL pull your eyes outta their damn sockets.
   /*
@@ -38,9 +42,19 @@ function main() { //Builds the nodelet, then runs the scripts. only run once or 
   nlTimePar.setAttribute("id","netherlandsTimeParagraph");
   nlTimeDiv.appendChild(nlTimePar); //ka-CHUNK
   var timeButton = document.createElement("button");
-  timebutton.setAttribute("id","timeButton");
-  timebutton.setAttribute("class","button");
+  timeButton.setAttribute("id","timeButton");
+  timeButton.setAttribute("class","button");
+  nlTimeDiv.appendChild(timeButton); //ka-CHUNK
+  //time function construction complete. run time function.
+  window.setInterval(updateNLTime, 15000); //updates every 15 seconds.
+  //end time setup.
   
-  //time function construction complete.
-  
+}
+
+function updateNLTime() {
+  //The Netherlands in in UTC +1 hour, so we can do the math using the standard UTC timer. 
+  //We will format it like this: h:m:s
+  //also, finally, f-strings in js. aka template literals.
+  nlTimePar.innerHTML = `${Date.getUTCHours()+1}:${Date.getUTCMinutes()}:${Date.getUTCSeconds()}`;
+  //and that's literally it. All that setup to show this one line of code. god bless the makers of JS and HTML.
 }
